@@ -15,7 +15,7 @@ void input_coefficient(double *a, double *b, double *c)
     while(scanf("%lf %lf %lf", a, b, c) != 3)
     {
         while (getchar() != '\n');
-        input_error();
+        printf("Вы некорректно ввели число!\n");
         printf("Введите через пробел три коэффицента: ");
     }
 }
@@ -90,11 +90,6 @@ int calculation(double *dis, double *x1, double *x2, double *lin_eq, double a, d
     {
         return 0;
     }
-}
-
-void input_error()
-{
-    printf("Вы некорректно ввели число!\n");
 }
 
 void pointer_error()

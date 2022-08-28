@@ -10,7 +10,6 @@ double discriminant(double, double, double);
 double linear_equation(double, double);
 int number_of_solutions(double, double, double, double);
 int calculation(double*, double*, double*, double*, double, double, double);
-void input_error();
 void pointer_error();
 void output(int, double, double, double);
 int is_zero(double);
