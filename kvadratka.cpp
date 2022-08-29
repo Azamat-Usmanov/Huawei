@@ -44,52 +44,31 @@ int check_pointer(double *a, double *b, double *c, double *dis, double *x1, doub
     return a || b || c || dis || x1 || x2;
 }
 
-int number_of_solutions(double d, double a, double b, double c)
+int calculation(double *dis, double *x1, double *x2, double *lin_eq, double a, double b, double c)
 {
+    *dis = discriminant(a, b, c);
+    
     if (is_zero(a) && !is_zero(b))
     {
+        *lin_eq = linear_equation(b, c);
         return 3;
     }
     else if (!is_zero(a))
     {
-        if (d > 0)
+        if (*dis > 0)
         {
+            *x1 = first_root(*dis, a, b);
+            *x2 = second_root(*dis, a, b);
             return 2;
         }
-        else if (is_zero(d))
+        else if (is_zero(*dis))
         {
+            *x1 = first_root(*dis, a, b);
             return 1;
         }
     }
 
     return 0;
-}
-
-int calculation(double *dis, double *x1, double *x2, double *lin_eq, double a, double b, double c)
-{
-    *dis = discriminant(a, b, c);
-    int numder = number_of_solutions(*dis, a, b, c);
-    
-    if (numder == 2)
-    {
-        *x1 = first_root(*dis, a, b);
-        *x2 = second_root(*dis, a, b);
-        return 2;
-    }
-    else if (numder == 1)
-    {
-        *x1 = first_root(*dis, a, b);
-        return 1;
-    }
-    else if (numder == 3)
-    {
-        *lin_eq = linear_equation(b, c);
-        return 3;
-    }
-    else
-    {
-        return 0;
-    }
 }
 
 void pointer_error()
