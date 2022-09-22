@@ -109,7 +109,7 @@ int creat_buffer(FILE *f, char ** text, int number_of_symbols)
 {
     *text = (char*)calloc((number_of_symbols + 2), sizeof(char));
     
-    assert(text);
+    assert(*text);
 
     fread(*text, sizeof(char), number_of_symbols, f);
 
