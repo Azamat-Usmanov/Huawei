@@ -18,22 +18,15 @@ int main()
     filling_array_of_structures(&buffStruct, &text, number_of_symbols, number_of_lines);
 
     my_qsort(buffStruct, 0, number_of_lines - 1, comparator_for_first_words);
-
-    for (int i = 0; i < number_of_lines; i++) 
-    {
-        printf("%s\n", buffStruct[i].str_pointer);
-    }
-
-    printf("\n\n");
+    write_in_file(f, buffStruct, number_of_lines, "result.txt");
 
     my_qsort(buffStruct, 0, number_of_lines - 1, comparator_for_last_words);
+    write_in_file(f, buffStruct, number_of_lines, "result.txt");
 
-    for (int i = 0; i < number_of_lines; i++) 
-    {
-        printf("%s\n", buffStruct[i].str_pointer);
-    }
+    write_original_text_in_text(f, number_of_symbols, text, "result.txt");
 
     fclose(f);
-
+    free(buffStruct);
+    free(text);
     return 0;
 }
