@@ -4,9 +4,13 @@
 #include "evgeniy_onegin.h"
 #include <sys/stat.h>
 #include <ctype.h>
+#include <assert.h>
 
 int comparator_for_first_words(const void * a_ptr, const void * b_ptr)
 {
+    assert(a_ptr);
+    assert(b_ptr);
+
     const LINE_OF_TEXT * a = (const LINE_OF_TEXT *)a_ptr;
     const LINE_OF_TEXT * b = (const LINE_OF_TEXT *)b_ptr;
     int i = 0;
@@ -32,6 +36,9 @@ int comparator_for_first_words(const void * a_ptr, const void * b_ptr)
 
 int comparator_for_last_words(const void * a_ptr, const void * b_ptr)
 {
+    assert(a_ptr);
+    assert(b_ptr);
+
     const LINE_OF_TEXT * a = (const LINE_OF_TEXT *)a_ptr;
     const LINE_OF_TEXT * b = (const LINE_OF_TEXT *)b_ptr;
     
@@ -61,6 +68,9 @@ int comparator_for_last_words(const void * a_ptr, const void * b_ptr)
 
 void my_qsort(LINE_OF_TEXT * buffStruct, int left, int right, int (*comparator)(const void * a_ptr, const void * b_ptr))
 {
+    assert(buffStruct);
+    assert(comparator);
+
     int i, last;
     void swap(LINE_OF_TEXT * buffStruct, int i, int j);
     if (left >= right)
@@ -78,6 +88,8 @@ void my_qsort(LINE_OF_TEXT * buffStruct, int left, int right, int (*comparator)(
 
 void swap(LINE_OF_TEXT * buffStruct, int i, int j)
 {
+    assert(buffStruct);
+
     LINE_OF_TEXT temp = buffStruct[i];
     buffStruct[i] = buffStruct[j];
     buffStruct[j] = temp;
@@ -85,15 +97,20 @@ void swap(LINE_OF_TEXT * buffStruct, int i, int j)
 
 int counting_number_of_symbols(const char * file_name)
 {
+    assert(file_name);
+
     struct stat buff;
     stat(file_name, &buff);
     int symbols = buff.st_size;
     return symbols;
 }
 
-int string_parsing(FILE *f, char **text, int number_of_symbols)
+int creat_buffer(FILE *f, char ** text, int number_of_symbols)
 {
     *text = (char*)calloc((number_of_symbols + 2), sizeof(char));
+    
+    assert(text);
+
     fread(*text, sizeof(char), number_of_symbols, f);
 
     int number_of_lines = 0;
@@ -111,6 +128,10 @@ int string_parsing(FILE *f, char **text, int number_of_symbols)
 void filling_array_of_structures(LINE_OF_TEXT ** buffStruct, char ** text, int number_of_symbols, int number_of_lines)
 {
     *buffStruct = (LINE_OF_TEXT*)calloc(number_of_lines, sizeof(LINE_OF_TEXT));
+
+    assert(*text);
+    assert(*buffStruct);
+
     number_of_lines = 0;
     int count = 0;
     for (int i = 0; i < number_of_symbols; i++)
@@ -126,6 +147,9 @@ void filling_array_of_structures(LINE_OF_TEXT ** buffStruct, char ** text, int n
 
 void write_in_file(FILE *f, LINE_OF_TEXT * buffStruct, int number_of_lines, const char * name_file)
 {
+    assert(buffStruct);
+    assert(name_file);
+
     f = fopen(name_file, "a");
     for (int i = 0; i < number_of_lines; i++) 
     {
@@ -138,6 +162,9 @@ void write_in_file(FILE *f, LINE_OF_TEXT * buffStruct, int number_of_lines, cons
 
 void write_original_text_in_text(FILE *f, int number_of_symbols, char * text, const char * name_file)
 {
+    assert(text);
+    assert(name_file);
+
     f = fopen(name_file, "a");
     fwrite(text, sizeof(char), number_of_symbols, f);
     fclose(f);

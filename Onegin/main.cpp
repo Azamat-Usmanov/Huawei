@@ -10,11 +10,12 @@ int main()
     FILE *f;
     f = fopen("verse.txt", "r");
 
-    char * text;
-    LINE_OF_TEXT * buffStruct;
+    char * text = NULL;
+    LINE_OF_TEXT * buffStruct = NULL;
 
     int number_of_symbols = counting_number_of_symbols("verse.txt");
-    int number_of_lines = string_parsing(f, &text, number_of_symbols);
+
+    int number_of_lines = creat_buffer(f, &text, number_of_symbols);
     filling_array_of_structures(&buffStruct, &text, number_of_symbols, number_of_lines);
 
     my_qsort(buffStruct, 0, number_of_lines - 1, comparator_for_first_words);
