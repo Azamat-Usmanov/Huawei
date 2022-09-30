@@ -2,6 +2,9 @@
 #include <ctype.h>
 #include <assert.h>
 
+// TODO: make two comparators share code! They are almost identical, 
+//       feels like agressive copy-pasta.
+
 int comparator_for_first_words(const void * a_ptr, const void * b_ptr)
 {
     assert(a_ptr);
@@ -12,11 +15,13 @@ int comparator_for_first_words(const void * a_ptr, const void * b_ptr)
     int i = 0;
     int j = 0;
     if (isalpha(*(a->str_pointer + i)))
-    {
+    { // TODO:  ^~~~~~~~~~~~~~~~~~~~~ this is the same as a->str_pointer[i] 
+      //        Use this more conventional syntax
         if (isalpha(*(b->str_pointer + j)))
         {
             while ((tolower(*(a->str_pointer + i)) - tolower(*(b->str_pointer + j))) == 0)
-            {
+            { // TODO:      ^~~~~~~~~~~~~~~~~~~~~            ^~~~~~~~~~~~~~~~~~~~~
+              // Also: extract whole comparison in a function
                 i++;
                 j++;
             }
@@ -44,11 +49,11 @@ int comparator_for_last_words(const void * a_ptr, const void * b_ptr)
     for (int i = 0; i < a->len; i++)
     {
         if (isalpha(*(a->str_pointer + a_len - 1)))
-        {
+        { // TODO:  ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~ Use
             if (isalpha(*(b->str_pointer + b_len - 1)))
             {
                 while ((tolower(*(a->str_pointer + a_len - 1)) - tolower(*(b->str_pointer + b_len - 1))) == 0)
-                {
+                { //            ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~ Variables
                     a_len--;
                     b_len--;   
                 }
@@ -67,7 +72,9 @@ void my_qsort(LINE_OF_TEXT * buffStruct, int left, int right, int (*comparator)(
     assert(buffStruct);
     assert(comparator);
 
-    int i, last;
+    int i, last; // TODO: move closer to usage, initialize!
+    // TODO: Forward-declaration here? Really? Just define fricking
+    //       swap function before my_qsort. Or at least move this out.
     void swap(LINE_OF_TEXT * buffStruct, int i, int j);
     if (left >= right)
         return; 
@@ -82,6 +89,8 @@ void my_qsort(LINE_OF_TEXT * buffStruct, int left, int right, int (*comparator)(
     my_qsort(buffStruct, last+1, right, comparator);
 }
 
+// TODO: Can you write a generalized swap that would work with
+//       any kind of elements, not just LINE_OF_TEXTs?
 void swap(LINE_OF_TEXT * buffStruct, int i, int j)
 {
     assert(buffStruct);

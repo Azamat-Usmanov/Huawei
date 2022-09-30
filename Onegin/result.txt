@@ -1,3 +1,5 @@
+# TODO: Why did you add result.txt in your git repo?
+
 a step away!
 adjust for him his pillows,
 and nothing better could invent.
@@ -20,6 +22,7 @@ when he was taken gravely ill,
 he forced one to respect him
 To others his example is a lesson;
 "My uncle has most honest principles:What base perfidiousness
+# TODO: What is this?)              ^
 adjust for him his pillows,
 but, good God, what a bore to sit
 and nothing better could invent.
