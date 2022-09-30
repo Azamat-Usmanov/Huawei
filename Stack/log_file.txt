@@ -1,0 +1,12 @@
+int StackPush_(Stack *, Elem_t, int) at Stack.cpp(11): value: 1.000000
+int StackPush_(Stack *, Elem_t, int) at Stack.cpp(12): value: 2.000000
+int StackPush_(Stack *, Elem_t, int) at Stack.cpp(13): value: 3.000000
+int StackPush_(Stack *, Elem_t, int) at Stack.cpp(14): value: 4.000000
+Elem_t StackPop_(Stack *, int) at Stack.cpp(15): value: 4.000000
+Elem_t StackPop_(Stack *, int) at Stack.cpp(16): value: 3.000000
+int StackPush_(Stack *, Elem_t, int) at Stack.cpp(11): value: 1.000000
+int StackPush_(Stack *, Elem_t, int) at Stack.cpp(12): value: 2.000000
+int StackPush_(Stack *, Elem_t, int) at Stack.cpp(13): value: 3.000000
+int StackPush_(Stack *, Elem_t, int) at Stack.cpp(14): value: 4.000000
+Elem_t StackPop_(Stack *, int) at Stack.cpp(15): value: 4.000000
+Elem_t StackPop_(Stack *, int) at Stack.cpp(16): value: 3.000000
