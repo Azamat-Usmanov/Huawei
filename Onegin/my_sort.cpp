@@ -1,101 +1,86 @@
 #include "evgeniy_onegin.h"
+#include "my_sort.h"
 #include <ctype.h>
 #include <assert.h>
+#include <string.h>
 
-// TODO: make two comparators share code! They are almost identical, 
-//       feels like agressive copy-pasta.
+static int my_isalpha(const char symbol)
+{
+    return (isalpha(symbol) || symbol == '\n' || symbol == '\0');
+}
+
+int my_strcmp(char * a_ptr, char * b_ptr, int sorted)
+{
+    if (!my_isalpha(*a_ptr))
+    {
+        return my_strcmp(a_ptr += sorted, b_ptr, sorted);
+    }
+
+    if (!my_isalpha(*b_ptr))
+    {
+        return my_strcmp(a_ptr, b_ptr += sorted, sorted);
+    }
+
+    if ((tolower(*a_ptr) == tolower(*b_ptr)) && !my_isalpha(*a_ptr) && !my_isalpha(*b_ptr))
+    {
+        return my_strcmp(a_ptr += sorted, b_ptr += sorted, sorted);
+    }
+    
+    return tolower(*a_ptr) - tolower(*b_ptr);
+
+}
 
 int comparator_for_first_words(const void * a_ptr, const void * b_ptr)
 {
-    assert(a_ptr);
-    assert(b_ptr);
-
-    const LINE_OF_TEXT * a = (const LINE_OF_TEXT *)a_ptr;
-    const LINE_OF_TEXT * b = (const LINE_OF_TEXT *)b_ptr;
-    int i = 0;
-    int j = 0;
-    if (isalpha(*(a->str_pointer + i)))
-    { // TODO:  ^~~~~~~~~~~~~~~~~~~~~ this is the same as a->str_pointer[i] 
-      //        Use this more conventional syntax
-        if (isalpha(*(b->str_pointer + j)))
-        {
-            while ((tolower(*(a->str_pointer + i)) - tolower(*(b->str_pointer + j))) == 0)
-            { // TODO:      ^~~~~~~~~~~~~~~~~~~~~            ^~~~~~~~~~~~~~~~~~~~~
-              // Also: extract whole comparison in a function
-                i++;
-                j++;
-            }
-        }
-        else
-            j++;
-    }
-    else
-        i++;
-
-    return tolower(*(a->str_pointer + i)) - tolower(*(b->str_pointer + j));
+    const line_of_text * a = (const line_of_text *)a_ptr;
+    const line_of_text * b = (const line_of_text *)b_ptr;
+    return my_strcmp(a->str_pointer, b->str_pointer, FORWARD);
 }
 
 int comparator_for_last_words(const void * a_ptr, const void * b_ptr)
 {
-    assert(a_ptr);
-    assert(b_ptr);
+    const line_of_text * a = (const line_of_text *)a_ptr;
+    const line_of_text * b = (const line_of_text *)b_ptr;
 
-    const LINE_OF_TEXT * a = (const LINE_OF_TEXT *)a_ptr;
-    const LINE_OF_TEXT * b = (const LINE_OF_TEXT *)b_ptr;
-    
-    int a_len = a->len;
-    int b_len = b->len;
-
-    for (int i = 0; i < a->len; i++)
+    if (a->len == 0)
     {
-        if (isalpha(*(a->str_pointer + a_len - 1)))
-        { // TODO:  ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~ Use
-            if (isalpha(*(b->str_pointer + b_len - 1)))
-            {
-                while ((tolower(*(a->str_pointer + a_len - 1)) - tolower(*(b->str_pointer + b_len - 1))) == 0)
-                { //            ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~ Variables
-                    a_len--;
-                    b_len--;   
-                }
-            }
-            else
-                b_len--;
-        } 
-        else
-            a_len--;
+        return -1;
     }
-    return tolower(*(a->str_pointer + a_len - 1)) - tolower(*(b->str_pointer + b_len - 1));
+    if (b->len == 0)
+    {
+        return 1;
+    }
+
+    char * last_symbol_a = a->str_pointer + a->len - 2;
+    char * last_symbol_b = b->str_pointer + b->len - 2;
+
+    return my_strcmp(last_symbol_a, last_symbol_b, BACK);
 }
 
-void my_qsort(LINE_OF_TEXT * buffStruct, int left, int right, int (*comparator)(const void * a_ptr, const void * b_ptr))
+void swap(void * elem_to_swap, int i, int j, size_t size)
+{
+    void * temp = (char*)calloc(1, size);
+    memcpy(temp, (char*)elem_to_swap + i * size, size);
+    memcpy((char*)elem_to_swap + i * size, (char*)elem_to_swap + j * size, size);
+    memcpy((char*)elem_to_swap + j * size, temp, size);
+    free(temp);
+}
+
+void my_qsort(line_of_text * buffStruct, int left, int right, int (*comparator)(const void * a_ptr, const void * b_ptr))
 {
     assert(buffStruct);
     assert(comparator);
 
-    int i, last; // TODO: move closer to usage, initialize!
-    // TODO: Forward-declaration here? Really? Just define fricking
-    //       swap function before my_qsort. Or at least move this out.
-    void swap(LINE_OF_TEXT * buffStruct, int i, int j);
     if (left >= right)
         return; 
-    swap(buffStruct, left, (left + right)/2);
+    swap(buffStruct, left, (left + right)/2, sizeof(line_of_text));
+    int i = 0, last = 0;
     last = left;
     for(i = left+1; i <= right; i++) {
         if (comparator(&buffStruct[i], &buffStruct[left]) < 0) 
-            swap(buffStruct, ++last, i);
+            swap(buffStruct, ++last, i, sizeof(line_of_text));
     }
-    swap(buffStruct, left, last);
+    swap(buffStruct, left, last, sizeof(line_of_text));
     my_qsort(buffStruct, left, last-1, comparator);
     my_qsort(buffStruct, last+1, right, comparator);
-}
-
-// TODO: Can you write a generalized swap that would work with
-//       any kind of elements, not just LINE_OF_TEXTs?
-void swap(LINE_OF_TEXT * buffStruct, int i, int j)
-{
-    assert(buffStruct);
-
-    LINE_OF_TEXT temp = buffStruct[i];
-    buffStruct[i] = buffStruct[j];
-    buffStruct[j] = temp;
 }
