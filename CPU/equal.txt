@@ -1,0 +1,7 @@
+PUSH 50
+PUSH 1
+4:
+DUP
+ADD
+JA :4
+HLT

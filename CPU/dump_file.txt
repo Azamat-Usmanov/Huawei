@@ -1,0 +1,701 @@
+Error: Size greater than capacity
+
+int StackPush_(Stack *, Elem_t, int) at ../Stack/Stack.cpp(22):
+Stack[0x7ff7bbf45928](error) stk1 at void compile(const char *) at asm.cpp(21)
+{
+	size = 18446744073709551615
+	capacity = 1
+	data[0x600000f3c030]
+	{
+
+		*[0] = -1141614296
+			}
+}
+
+Error: Size greater than capacity
+
+int StackPush_(Stack *, Elem_t, int) at ../Stack/Stack.cpp(22):
+Stack[0x7ff7bc752920](error) stk1 at void Run(const char *) at cpu.cpp(32)
+{
+	size = 18446744073709551615
+	capacity = 1
+	data[0x60000207c000]
+	{
+
+		*[0] = -1133172448
+			}
+}
+
+Error: Size greater than capacity
+
+int StackPush_(Stack *, Elem_t, int) at ../Stack/Stack.cpp(22):
+Stack[0x7ff7b4368920](error) stk1 at void Run(const char *) at cpu.cpp(32)
+{
+	size = 18446744073709551615
+	capacity = 1
+	data[0x600000164030]
+	{
+
+		*[0] = -1271494368
+			}
+}
+
+Error: Size greater than capacity
+
+int StackPush_(Stack *, Elem_t, int) at ../Stack/Stack.cpp(22):
+Stack[0x7ff7bd2c4920](error) stk1 at void Run(const char *) at cpu.cpp(32)
+{
+	size = 18446744073709551615
+	capacity = 1
+	data[0x600003114000]
+	{
+
+		*[0] = -1121171168
+			}
+}
+
+Error: Size greater than capacity
+
+int StackPush_(Stack *, Elem_t, int) at ../Stack/Stack.cpp(22):
+Stack[0x7ff7b27dd920](error) stk1 at void Run(const char *) at cpu.cpp(32)
+{
+	size = 18446744073709551615
+	capacity = 1
+	data[0x600002e18000]
+	{
+
+		*[0] = -1300375264
+			}
+}
+
+Error: Size greater than capacity
+
+int StackPush_(Stack *, Elem_t, int) at ../Stack/Stack.cpp(22):
+Stack[0x7ff7b0127920](error) stk1 at void Run(const char *) at cpu.cpp(32)
+{
+	size = 18446744073709551615
+	capacity = 1
+	data[0x60000146c030]
+	{
+
+		*[0] = -1340966624
+			}
+}
+
+Error: Size greater than capacity
+
+int StackPush_(Stack *, Elem_t, int) at ../Stack/Stack.cpp(22):
+Stack[0x7ff7b4950920](error) stk1 at void Run(const char *) at cpu.cpp(32)
+{
+	size = 18446744073709551615
+	capacity = 2
+	data[0x600001de0030]
+	{
+
+		*[0] = -1265301216
+		*[1] = 32
+			}
+}
+
+Error: Size greater than capacity
+
+Elem_t StackPop_(Stack *, int) at ../Stack/Stack.cpp(34):
+Stack[0x7ff7b61e3920](error) stk1 at void Run(const char *) at cpu.cpp(32)
+{
+	size = 18446744073709551615
+	capacity = 1
+	data[0x600002690000]
+	{
+
+		*[0] = -1239533280
+			}
+}
+
+Error: Size greater than capacity
+
+int StackPush_(Stack *, Elem_t, int) at ../Stack/Stack.cpp(22):
+Stack[0x7ff7b2308920](error) stk1 at void Run(const char *) at cpu.cpp(32)
+{
+	size = 18446744073709551615
+	capacity = 1
+	data[0x600003c78000]
+	{
+
+		*[0] = -1305442016
+			}
+}
+
+Error: Size greater than capacity
+
+Elem_t StackPop_(Stack *, int) at ../Stack/Stack.cpp(34):
+Stack[0x7ff7ba247920](error) stk1 at void Run(const char *) at cpu.cpp(32)
+{
+	size = 18446744073709551615
+	capacity = 1
+	data[0x600003228030]
+	{
+
+		*[0] = -1172014816
+			}
+}
+
+Error: Size greater than capacity
+
+Elem_t StackPop_(Stack *, int) at ../Stack/Stack.cpp(34):
+Stack[0x7ff7bcf6c920](error) stk1 at void Run(const char *) at cpu.cpp(33)
+{
+	size = 18446744073709551615
+	capacity = 1
+	data[0x6000017a8030]
+	{
+
+		*[0] = -1124677344
+			}
+}
+
+Error: Size greater than capacity
+
+Elem_t StackPop_(Stack *, int) at ../Stack/Stack.cpp(34):
+Stack[0x7ff7bbdf1920](error) stk1 at void Run(const char *) at cpu.cpp(33)
+{
+	size = 18446744073709551615
+	capacity = 1
+	data[0x600002dec000]
+	{
+
+		*[0] = -1143006944
+			}
+}
+
+Error: Size greater than capacity
+
+Elem_t StackPop_(Stack *, int) at ../Stack/Stack.cpp(34):
+Stack[0x7ff7bf4f1920](error) stk1 at void Run(const char *) at cpu.cpp(33)
+{
+	size = 18446744073709551615
+	capacity = 1
+	data[0x600001e04000]
+	{
+
+		*[0] = -1085335264
+			}
+}
+
+Error: Size greater than capacity
+
+Elem_t StackPop_(Stack *, int) at ../Stack/Stack.cpp(34):
+Stack[0x7ff7b7961920](error) stk1 at void Run(const char *) at cpu.cpp(33)
+{
+	size = 18446744073709551615
+	capacity = 1
+	data[0x60000097c000]
+	{
+
+		*[0] = -1214899936
+			}
+}
+
+Error: Size greater than capacity
+
+int StackPush_(Stack *, Elem_t, int) at ../Stack/Stack.cpp(22):
+Stack[0x7ff7b37e9920](error) stk1 at void Run(const char *) at cpu.cpp(33)
+{
+	size = 18446744073709551615
+	capacity = 1
+	data[0x6000023d8030]
+	{
+
+		*[0] = -1283548896
+			}
+}
+
+Error: Size greater than capacity
+
+int StackPush_(Stack *, Elem_t, int) at ../Stack/Stack.cpp(22):
+Stack[0x7ff7bd5ce920](error) stk1 at void Run(const char *) at cpu.cpp(41)
+{
+	size = 18446744073709551615
+	capacity = 1
+	data[0x600000bbc000]
+	{
+
+		*[0] = -1117984480
+			}
+}
+
+Error: Size greater than capacity
+
+int StackPush_(Stack *, Elem_t, int) at ../Stack/Stack.cpp(22):
+Stack[0x7ff7b86f6920](error) stk1 at void Run(const char *) at cpu.cpp(41)
+{
+	size = 18446744073709551615
+	capacity = 1
+	data[0x600003eb8000]
+	{
+
+		*[0] = -1200658144
+			}
+}
+
+Error: Size greater than capacity
+
+int StackPush_(Stack *, Elem_t, int) at ../Stack/Stack.cpp(22):
+Stack[0x7ff7b3eea920](error) stk1 at void Run(const char *) at cpu.cpp(34)
+{
+	size = 18446744073709551615
+	capacity = 1
+	data[0x600000e08030]
+	{
+
+		*[0] = -1276204768
+			}
+}
+
+Error: Size greater than capacity
+
+int StackPush_(Stack *, Elem_t, int) at ../Stack/Stack.cpp(22):
+Stack[0x7ff7b5a5b920](error) stk1 at void Run(const char *) at cpu.cpp(41)
+{
+	size = 18446744073709551615
+	capacity = 1
+	data[0x6000017dc030]
+	{
+
+		*[0] = -1247430368
+			}
+}
+
+Error: Size greater than capacity
+
+int StackPush_(Stack *, Elem_t, int) at ../Stack/Stack.cpp(22):
+Stack[0x7ff7bdf52920](error) stk1 at void Run(const char *) at cpu.cpp(41)
+{
+	size = 18446744073709551615
+	capacity = 1
+	data[0x600001c54000]
+	{
+
+		*[0] = -1108006624
+			}
+}
+
+Error: Size greater than capacity
+
+int StackPush_(Stack *, Elem_t, int) at ../Stack/Stack.cpp(22):
+Stack[0x7ff7b952c920](error) stk1 at void Run(const char *) at cpu.cpp(41)
+{
+	size = 18446744073709551615
+	capacity = 1
+	data[0x600003e18030]
+	{
+
+		*[0] = -1185756896
+			}
+}
+
+Error: Size greater than capacity
+
+int StackPush_(Stack *, Elem_t, int) at ../Stack/Stack.cpp(22):
+Stack[0x7ff7b4392920](error) stk1 at void Run(const char *) at cpu.cpp(41)
+{
+	size = 18446744073709551615
+	capacity = 1
+	data[0x60000113c000]
+	{
+
+		*[0] = -1271322336
+			}
+}
+
+Error: Size greater than capacity
+
+int StackPush_(Stack *, Elem_t, int) at ../Stack/Stack.cpp(22):
+Stack[0x7ff7b17b3920](error) stk1 at void Run(const char *) at cpu.cpp(42)
+{
+	size = 18446744073709551615
+	capacity = 1
+	data[0x600002af8030]
+	{
+
+		*[0] = -1317324512
+			}
+}
+
+Error: Size greater than capacity
+
+int StackPush_(Stack *, Elem_t, int) at ../Stack/Stack.cpp(22):
+Stack[0x7ff7b801c920](error) stk1 at void Run(const char *) at cpu.cpp(42)
+{
+	size = 18446744073709551615
+	capacity = 1
+	data[0x6000013a8030]
+	{
+
+		*[0] = -1207842528
+			}
+}
+
+Error: Size greater than capacity
+
+int StackPush_(Stack *, Elem_t, int) at ../Stack/Stack.cpp(22):
+Stack[0x7ff7b2be3920](error) stk1 at void Run(const char *) at cpu.cpp(43)
+{
+	size = 18446744073709551615
+	capacity = 1
+	data[0x6000037a4000]
+	{
+
+		*[0] = -1296156384
+			}
+}
+
+Error: Size greater than capacity
+
+int StackPush_(Stack *, Elem_t, int) at ../Stack/Stack.cpp(22):
+Stack[0x7ff7b477f920](error) stk1 at void Run(const char *) at cpu.cpp(43)
+{
+	size = 18446744073709551615
+	capacity = 1
+	data[0x600001fb8030]
+	{
+
+		*[0] = -1267205856
+			}
+}
+
+Error: Size greater than capacity
+
+Elem_t StackPop_(Stack *, int) at ../Stack/Stack.cpp(34):
+Stack[0x7ff7b0048920](error) stk1 at void Run(const char *) at cpu.cpp(43)
+{
+	size = 18446744073709551615
+	capacity = 1
+	data[0x60000354c030]
+	{
+
+		*[0] = -1341880032
+			}
+}
+
+Error: Size greater than capacity
+
+Elem_t StackPop_(Stack *, int) at ../Stack/Stack.cpp(34):
+Stack[0x7ff7b1b72920](error) stk1 at void Run(const char *) at cpu.cpp(40)
+{
+	size = 18446744073709551615
+	capacity = 1
+	data[0x600001abc000]
+	{
+
+		*[0] = -1313396448
+			}
+}
+
+Error: Size greater than capacity
+
+Elem_t StackPop_(Stack *, int) at ../Stack/Stack.cpp(34):
+Stack[0x7ff7b416f920](error) stk1 at void Run(const char *) at cpu.cpp(40)
+{
+	size = 18446744073709551615
+	capacity = 1
+	data[0x60000247c000]
+	{
+
+		*[0] = -1273562848
+			}
+}
+
+Error: Size greater than capacity
+
+Elem_t StackPop_(Stack *, int) at ../Stack/Stack.cpp(34):
+Stack[0x7ff7bd2aa920](error) stk1 at void Run(const char *) at cpu.cpp(40)
+{
+	size = 18446744073709551615
+	capacity = 1
+	data[0x600001a98030]
+	{
+
+		*[0] = -1121277664
+			}
+}
+
+Error: Size greater than capacity
+
+Elem_t StackPop_(Stack *, int) at ../Stack/Stack.cpp(34):
+Stack[0x7ff7b7a52920](error) stk1 at void Run(const char *) at cpu.cpp(40)
+{
+	size = 18446744073709551615
+	capacity = 1
+	data[0x600003c08000]
+	{
+
+		*[0] = -1213912800
+			}
+}
+
+Error: Size greater than capacity
+
+Elem_t StackPop_(Stack *, int) at ../Stack/Stack.cpp(34):
+Stack[0x7ff7b682b920](error) stk1 at void Run(const char *) at cpu.cpp(40)
+{
+	size = 18446744073709551615
+	capacity = 1
+	data[0x6000031d8000]
+	{
+
+		*[0] = -1232946912
+			}
+}
+
+Error: Size greater than capacity
+
+Elem_t StackPop_(Stack *, int) at ../Stack/Stack.cpp(34):
+Stack[0x7ff7b4222920](error) stk1 at void Run(const char *) at cpu.cpp(40)
+{
+	size = 18446744073709551615
+	capacity = 1
+	data[0x60000025c000]
+	{
+
+		*[0] = -1272829664
+			}
+}
+
+Error: Size greater than capacity
+
+Elem_t StackPop_(Stack *, int) at ../Stack/Stack.cpp(34):
+Stack[0x7ff7ba3df920](error) stk1 at void Run(const char *) at cpu.cpp(40)
+{
+	size = 18446744073709551615
+	capacity = 1
+	data[0x600003794030]
+	{
+
+		*[0] = -1170343648
+			}
+}
+
+Error: Size greater than capacity
+
+Elem_t StackPop_(Stack *, int) at ../Stack/Stack.cpp(34):
+Stack[0x7ff7b7383920](error) stk1 at void Run(const char *) at cpu.cpp(40)
+{
+	size = 18446744073709551615
+	capacity = 1
+	data[0x6000013fc000]
+	{
+
+		*[0] = -1221052128
+			}
+}
+
+Error: Size greater than capacity
+
+int StackPush_(Stack *, Elem_t, int) at ../Stack/Stack.cpp(22):
+Stack[0x7ff7b2813920](error) stk1 at void Run(const char *) at cpu.cpp(40)
+{
+	size = 18446744073709551615
+	capacity = 1
+	data[0x600003490030]
+	{
+
+		*[0] = -1300154080
+			}
+}
+
+Error: Size greater than capacity
+
+int StackPush_(Stack *, Elem_t, int) at ../Stack/Stack.cpp(22):
+Stack[0x7ff7b60cc920](error) stk1 at void Run(const char *) at cpu.cpp(40)
+{
+	size = 18446744073709551615
+	capacity = 1
+	data[0x600002f04000]
+	{
+
+		*[0] = -1240676064
+			}
+}
+
+Error: Size greater than capacity
+
+int StackPush_(Stack *, Elem_t, int) at ../Stack/Stack.cpp(22):
+Stack[0x7ff7be489920](error) stk1 at void Run(const char *) at cpu.cpp(41)
+{
+	size = 18446744073709551615
+	capacity = 1
+	data[0x600000d4c000]
+	{
+
+		*[0] = -1102538464
+			}
+}
+
+Error: Size greater than capacity
+
+int StackPush_(Stack *, Elem_t, int) at ../Stack/Stack.cpp(22):
+Stack[0x7ff7b23b6920](error) stk1 at void Run(const char *) at cpu.cpp(41)
+{
+	size = 18446744073709551615
+	capacity = 1
+	data[0x60000062c030]
+	{
+
+		*[0] = -1304729312
+			}
+}
+
+Error: Size greater than capacity
+
+int StackPush_(Stack *, Elem_t, int) at ../Stack/Stack.cpp(22):
+Stack[0x7ff7b0966920](error) stk1 at void Run(const char *) at cpu.cpp(41)
+{
+	size = 18446744073709551615
+	capacity = 1
+	data[0x600000040030]
+	{
+
+		*[0] = -1332319968
+			}
+}
+
+Error: Size greater than capacity
+
+int StackPush_(Stack *, Elem_t, int) at ../Stack/Stack.cpp(22):
+Stack[0x7ff7b5fdc920](error) stk1 at void Run(const char *) at cpu.cpp(41)
+{
+	size = 18446744073709551615
+	capacity = 1
+	data[0x600003f7c000]
+	{
+
+		*[0] = -1241659104
+			}
+}
+
+Error: Size greater than capacity
+
+int StackPush_(Stack *, Elem_t, int) at ../Stack/Stack.cpp(22):
+Stack[0x7ff7ba81d920](error) stk1 at void Run(const char *) at cpu.cpp(41)
+{
+	size = 18446744073709551615
+	capacity = 1
+	data[0x60000024c000]
+	{
+
+		*[0] = -1165895392
+			}
+}
+
+Error: Size greater than capacity
+
+int StackPush_(Stack *, Elem_t, int) at ../Stack/Stack.cpp(22):
+Stack[0x7ff7ba50e920](error) stk1 at void Run(const char *) at cpu.cpp(41)
+{
+	size = 18446744073709551615
+	capacity = 1
+	data[0x600000358000]
+	{
+
+		*[0] = -1169102560
+			}
+}
+
+Error: Size greater than capacity
+
+int StackPush_(Stack *, Elem_t, int) at ../Stack/Stack.cpp(22):
+Stack[0x7ff7bb3c3920](error) stk1 at void Run(const char *) at cpu.cpp(40)
+{
+	size = 18446744073709551615
+	capacity = 1
+	data[0x6000010f4000]
+	{
+
+		*[0] = -1153681120
+			}
+}
+
+Error: Size greater than capacity
+
+int StackPush_(Stack *, Elem_t, int) at ../Stack/Stack.cpp(22):
+Stack[0x7ff7b93dc920](error) stk1 at void Run(const char *) at cpu.cpp(40)
+{
+	size = 18446744073709551615
+	capacity = 1
+	data[0x600002504030]
+	{
+
+		*[0] = -1187133152
+			}
+}
+
+Error: Size greater than capacity
+
+int StackPush_(Stack *, Elem_t, int) at ../Stack/Stack.cpp(22):
+Stack[0x7ff7bcfc2920](error) stk1 at void Run(const char *) at cpu.cpp(40)
+{
+	size = 18446744073709551615
+	capacity = 1
+	data[0x600001024000]
+	{
+
+		*[0] = -1124325088
+			}
+}
+
+Error: Size greater than capacity
+
+int StackPush_(Stack *, Elem_t, int) at ../Stack/Stack.cpp(22):
+Stack[0x7ff7b3a2e920](error) stk1 at void Run(const char *) at cpu.cpp(41)
+{
+	size = 18446744073709551615
+	capacity = 1
+	data[0x600002b5c000]
+	{
+
+		*[0] = -1281169120
+			}
+}
+
+Error: Size greater than capacity
+
+int StackPush_(Stack *, Elem_t, int) at ../Stack/Stack.cpp(22):
+Stack[0x7ff7bc001920](error) stk1 at void Run(const char *) at cpu.cpp(39)
+{
+	size = 18446744073709551615
+	capacity = 1
+	data[0x600002938000]
+	{
+
+		*[0] = -1140844256
+			}
+}
+
+Error: Size greater than capacity
+
+Elem_t StackPop_(Stack *, int) at ../Stack/Stack.cpp(34):
+Stack[0x7ff7bce49920](error) stk1 at void Run(const char *) at cpu.cpp(40)
+{
+	size = 18446744073709551615
+	capacity = 1
+	data[0x600002e58000]
+	{
+
+		*[0] = -1125869280
+			}
+}
+
+Error: Size greater than capacity
+
+Elem_t StackPop_(Stack *, int) at ../Stack/Stack.cpp(34):
+Stack[0x7ff7b0896920](error) stk1 at void Run(const char *) at cpu.cpp(40)
+{
+	size = 18446744073709551615
+	capacity = 1
+	data[0x6000028a4000]
+	{
+
+		*[0] = -1333171936
+			}
+}
+
